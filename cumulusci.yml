@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.49.0'
+project:
+    name: MyNew29thCummuluciProject
+    package:
+        name: MyNew29thCummuluciProjectPackage
+        api_version: '52.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/MyNew29thCummuluciProject/tests
+            options:
+                outputdir: robot/MyNew29thCummuluciProject/results
+
+    robot_testdoc:
+        options:
+            path: robot/MyNew29thCummuluciProject/tests
+            output: robot/MyNew29thCummuluciProject/doc/MyNew29thCummuluciProject_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
